@@ -10,6 +10,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <button onClick={alertHandler}>Click here!</button>
+        <button><a href="https://github.com/kubaparol/test-app" target="_blank">Click to see my repo</a></button>
         <a
           className="App-link"
           href="https://reactjs.org"
