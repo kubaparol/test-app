@@ -9,6 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <button onClick={alertHandler}>Click here!</button>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -20,6 +21,10 @@ function App() {
       </header>
     </div>
   );
+}
+
+function alertHandler() {
+  alert('Hello React!')
 }
 
 export default App;
