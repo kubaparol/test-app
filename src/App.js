@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import InputForm from './components/InputForm/InputForm'
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <button className='App-button App-button--alert' onClick={alertHandler}>Click here!</button>
         <button className='App-button App-button--repo'><a className='button-link' href="https://github.com/kubaparol/test-app" target="_blank">Click to see my repo</a></button>
-        <InputForm defaultValue={'Hello'} />
       </header>
     </div>
   );
