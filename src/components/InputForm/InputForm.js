@@ -12,12 +12,15 @@ export default class InputForm extends React.Component {
         const {userAnswer, errorMessage} = this.state;
         return (
             <section>
-                <span className='App-alert'>{errorMessage}</span>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <span>{this.props.text}</span>
+                    <span className='App-alert'>{errorMessage}</span>
+                </div>
                 <form onSubmit={this.submitHandler} className='App-form'>
                     <input name='answer' value={userAnswer} onChange={this.inputChange} className='form-input--answer'/>
                     <input type='submit' value='Add' className='form-input--submit' />
                 </form>
-                    <button className='App-button--clear' onClick={this.clearList}>Clear</button>
+                <button className='App-button--clear' onClick={this.clearList}>Clear</button>
                 <ul className='App-list'>{this.renderAnswersList()}</ul>
             </section>
         )
