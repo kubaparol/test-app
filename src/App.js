@@ -1,24 +1,16 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import InputForm from './components/InputForm/InputForm'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button onClick={alertHandler}>Click here!</button>
-        <button><a href="https://github.com/kubaparol/test-app" target="_blank">Click to see my repo</a></button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button className='App-button App-button--alert' onClick={alertHandler}>Click here!</button>
+        <button className='App-button App-button--repo'><a className='button-link' href="https://github.com/kubaparol/test-app" target="_blank">Click to see my repo</a></button>
+        <InputForm defaultValue={'Hello'} />
       </header>
     </div>
   );
