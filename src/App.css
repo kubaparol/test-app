@@ -24,73 +24,8 @@
   color: white;
 }
 
-.App-button, .App-button--clear {
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.1rem;
-  background-color: #61DAFB;
-  border: none;
-  transition: .2s;
-  border-radius: 5px;
-}
-
-.App-button--clear {
-  padding: 3px 30px;
-  background-color: rgb(172, 12, 12);
-  color: white;
-  position: relative;
-}
-
-.App-button:hover, .form-input--submit:hover, .App-button--clear:hover {
-  border-radius: 14px;
-  cursor: pointer;
-}
-
-.button-link {
-  text-decoration: none;
-  color: black;
-}
-
-.App-alert {
-  color: red;
-  font-size: 1.1rem;
-}
-
-.form-input--answer, .form-input--submit {
-  font-size: 1rem;
-  padding: 10px;
-  margin: 10px;
-  border: none;
-  outline: none;
-  transition: .2s;
-}
-
-.form-input--answer {
-  background-color: #c0e9f5;
-  border-radius: 10px;
-}
-
-.form-input--submit {
-  background-color: #61DAFB;
-  border-radius: 5px;
-}
-
-.App-item {
-  list-style: none;
-  font-size: 1.6rem;
-  background-color: #55727a;
-  margin: 10px;
-  border-radius: 10px;
-  transition: .2s;
-}
-
-.App-item:hover {
-  background-color: #61DAFB;
-}
-
-.App-list {
-  margin: 0;
-  padding: 0;
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
