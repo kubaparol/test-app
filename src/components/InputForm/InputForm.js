@@ -52,10 +52,12 @@ export default class InputForm extends React.Component {
 
     showLocalStorage() {
         const savedAnswers = localStorage.getItem('answers');
-        const savedAnswersArr = savedAnswers.split(',');
-            this.setState({
-                answers: [...this.state.answers, ...savedAnswersArr],
-            });
+        if(savedAnswers) {
+            const savedAnswersArr = savedAnswers.split(',');
+                this.setState({
+                    answers: [...this.state.answers, ...savedAnswersArr],
+                });
+        }
     }
 
     deleteFromLocalStorage() {

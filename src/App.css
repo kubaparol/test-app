@@ -101,3 +101,49 @@
     transform: rotate(360deg);
   }
 }
+
+@media (min-width: 400px) {
+  .App-header {
+    background-color: #2ecc71;
+  }
+
+  .App-button {
+    background-color: #f1c40f;
+  }
+  
+  .form-input--submit {
+    background-color: #e67e22;
+    color: white
+  }
+
+  .form-input--answer {
+    background-color: #f3e2d3;
+  }
+}
+
+@media (min-width: 1000px) {
+  .App-header {
+    background-color: #ffda79;
+  }
+
+  .App-button {
+    background-color: #f7f1e3;
+  }
+  
+  .form-input--submit {
+    background-color: #62ce41;
+    color: white;
+  }
+
+  .App-button, .form-input--submit, .App-button--clear {
+    box-shadow: 3px 3px 1px 1px #218c74;
+  }
+
+  .form-input--answer {
+    background-color: #ebeab8;
+  }
+
+  .App-button:hover, .form-input--submit:hover, .App-button--clear:hover {
+    box-shadow: 3px 3px 8px 1px #218c74;
+  }
+}
