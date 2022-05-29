@@ -1,7 +1,9 @@
 import React from 'react';
 import {v4 as uuid} from 'uuid';
 
-export default class InputForm extends React.Component {
+import classes from './styles.module.css'
+
+export class InputForm extends React.Component {
     state = {
         errorMessage: '',
         userAnswer: '',
@@ -14,14 +16,14 @@ export default class InputForm extends React.Component {
             <section>
                 <div style={{display: 'flex', flexDirection: 'column'}}>
                     <span>{this.props.text}</span>
-                    <span className='App-alert'>{errorMessage}</span>
+                    <span className={classes.form__alert}>{errorMessage}</span>
                 </div>
-                <form onSubmit={this.submitHandler} className='App-form'>
-                    <input name='answer' value={userAnswer} onChange={this.inputChange} className='form-input--answer'/>
-                    <input type='submit' value='Add' className='form-input--submit' />
+                <form onSubmit={this.submitHandler} className={classes.form}>
+                    <input name='answer' value={userAnswer} onChange={this.inputChange} className={classes.form__input_answer}/>
+                    <input type='submit' value='Add' className={classes.form__input_submit} />
                 </form>
-                <button className='App-button--clear' onClick={this.clearList}>Clear</button>
-                <ul className='App-list'>{this.renderAnswersList()}</ul>
+                <button className={classes.button__clear} onClick={this.clearList}>Clear</button>
+                <ul className={classes.list}>{this.renderAnswersList()}</ul>
             </section>
         )
     }
@@ -35,7 +37,7 @@ export default class InputForm extends React.Component {
     renderAnswersList() {
         const {answers} = this.state;
         return answers.map(answer => {
-            return <li key={uuid()} className='App-item'>{answer}</li>
+            return <li key={uuid()} className={classes.form__item}>{answer}</li>
         });  
     }
 
