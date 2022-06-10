@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import classes from "./styles.module.css";
 import { getList } from "../../api";
 
+import Modal from "../../components/Modal";
+
 export const HomePage = () => {
   const [list, setList] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     getList().then((items) => {
@@ -14,6 +17,7 @@ export const HomePage = () => {
 
   return (
     <section className={classes.section}>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
       <h2 className={classes.header}>Hello</h2>
       <a
         href="https://github.com/kubaparol/test-app"
